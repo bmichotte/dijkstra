@@ -68,8 +68,8 @@ class Dijkstra
 	/**
 	 *
 	 * @param array $positions
-	 * @param City $from
-	 * @param City $to 
+	 * @param Point $from
+	 * @param Point $to 
 	 */
 	public function __construct(array $positions, Point $from, Point $to)
 	{
@@ -119,7 +119,7 @@ class Dijkstra
 	
 	/**
 	 * Find the shortest path between a node and its linked nodes
-	 * @param City $parent
+	 * @param Point $parent
 	 * @return void
 	 */
 	protected function run(Point $parent)
@@ -158,7 +158,7 @@ class Dijkstra
 	}
 	
 	/**
-	 * Return the path (array of City) between $this->from and $this->to.
+	 * Return the path (array of Point) between $this->from and $this->to.
 	 * <br />Warning, the result can be incomplete (no path found)
 	 * @return array
 	 */
