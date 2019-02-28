@@ -83,7 +83,7 @@ function drawPaths(int $max, array $positions, Point $from, Point $to, array $sh
     imagefilledellipse($image, $from->x, $from->y, 10, 10, $color);
     imagefilledellipse($image, $to->x, $to->y, 10, 10, $color);
 
-    $content = imagepng($image, $filename);
+    imagepng($image, $filename);
 }
 
 function drawLine($image, Point $point1, Point $point2, $color, int $thick = 1): void
