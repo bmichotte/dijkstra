@@ -48,7 +48,7 @@ class Dijkstra
         return $this->run($this->from)->getPath();
     }
 
-    protected function run(Point $parent): Dijkstra
+    protected function run(Point $parent): self
     {
         // we reached the final point !
         if ($parent->equals($this->to)) {
