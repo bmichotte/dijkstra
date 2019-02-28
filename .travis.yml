@@ -1,0 +1,21 @@
+sudo: required
+
+language: php
+
+php:
+  - 7.2
+
+before_install:
+  - sudo apt-get update
+  - travis_retry composer self-update
+
+install:
+  - travis_retry composer update --prefer-source $COMPOSER_FLAGS
+
+script:
+  - vendor/bin/phpunit
+
+branches:
+  only:
+    - master
+    - develop

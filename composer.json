@@ -1,0 +1,40 @@
+{
+  "name": "bmichotte/dijkstra",
+  "description": "php 7+ implementation of the Dijkstra algorithm",
+  "version": "1.0.0",
+  "keywords": [
+    "dijkstra"
+  ],
+  "homepage": "https://github.com/bmichotte/dijkstra",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Benjamin Michotte",
+      "email": "bmichotte@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2"
+  },
+  "require-dev": {
+    "ext-gd": "*",
+    "phpunit/phpunit": "^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bmichotte\\Dijkstra\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bmichotte\\Dijkstra\\Test\\": "tests"
+    }
+  },
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
