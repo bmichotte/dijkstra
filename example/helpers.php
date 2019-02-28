@@ -1,4 +1,5 @@
 <?php
+
 use Bmichotte\Dijkstra\Point;
 use Bmichotte\Dijkstra\Dijkstra;
 

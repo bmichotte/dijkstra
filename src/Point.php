@@ -17,7 +17,7 @@ class Point
         $this->ref = "{$x}-{$y}";
     }
 
-    public function addPoint(Point $point): Point
+    public function addPoint(self $point): self
     {
         if (! in_array($point, $this->points)) {
             $this->points[] = $point;
@@ -31,7 +31,7 @@ class Point
         return $this;
     }
 
-    public function equals(Point $point): bool
+    public function equals(self $point): bool
     {
         return $this->ref === $point->ref;
     }
