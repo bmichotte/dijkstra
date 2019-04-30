@@ -31,4 +31,8 @@ $dijkstra = new Dijkstra($positions, $from, $to);
 $shortestPath = $dijkstra->findShortestPath();
 
 // draw the result
-drawPaths($max, $positions, $from, $to, $shortestPath, 'image.png');
+try {
+    drawPaths($max, $positions, $from, $to, $shortestPath, 'image.png');
+} catch (Exception $e) {
+    echo $e->getMessage();
+}

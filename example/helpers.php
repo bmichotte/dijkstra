@@ -52,6 +52,9 @@ function drawPaths(int $max, array $positions, Point $from, Point $to, array $sh
 {
     // open background
     $image = imagecreatetruecolor($max, $max);
+    if (! $image) {
+        throw new Exception('Can not create image');
+    }
     $color = imagecolorallocate($image, 255, 255, 255);
     imagefill($image, 0, 0, $color);
 
@@ -71,7 +74,8 @@ function drawPaths(int $max, array $positions, Point $from, Point $to, array $sh
 
     // draw the shortest path
     $color = imagecolorallocate($image, 255, 0, 255);
-    for ($i = 0; $i < count($shortestPath); $i++) {
+    $shortestPathLength = count($shortestPath);
+    for ($i = 0; $i < $shortestPathLength; $i++) {
         $p = $shortestPath[$i];
         if (isset($shortestPath[$i + 1])) {
             $d = $shortestPath[$i + 1];
@@ -85,6 +89,7 @@ function drawPaths(int $max, array $positions, Point $from, Point $to, array $sh
     imagefilledellipse($image, $to->x, $to->y, 10, 10, $color);
 
     imagepng($image, $filename);
+    imagedestroy($image);
 }
 
 function drawLine($image, Point $point1, Point $point2, $color, int $thick = 1): void
