@@ -63,6 +63,11 @@ class Dijkstra
             $this->calculateWeight($parent, $child);
         }
 
+        return $this->findNextParent();
+    }
+
+    protected function findNextParent(): self
+    {
         // search for the next parent (smallest weight)
         // we have to find the smallest weight for a node we didn't passed by atm
         $smallest = INF;
@@ -73,7 +78,8 @@ class Dijkstra
                 $nextParent = $weight['position'];
             }
         }
-        if (! is_null($nextParent)) {
+
+        if ($nextParent !== null) {
             return $this->run($nextParent);
         }
 
