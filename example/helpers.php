@@ -52,7 +52,7 @@ function drawPaths(int $max, array $positions, Point $from, Point $to, array $sh
 {
     // open background
     $image = imagecreatetruecolor($max, $max);
-    if (! $image) {
+    if ($image === false) {
         throw new Exception('Can not create image');
     }
     $color = imagecolorallocate($image, 255, 255, 255);
