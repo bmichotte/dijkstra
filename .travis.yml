@@ -4,6 +4,7 @@ language: php
 
 php:
   - 7.2
+  - 7.3
 
 before_install:
   - sudo apt-get update
@@ -13,7 +14,10 @@ install:
   - travis_retry composer update --prefer-source $COMPOSER_FLAGS
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_script:
+  - php vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover
 
 branches:
   only:
