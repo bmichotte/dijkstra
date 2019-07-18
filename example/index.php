@@ -25,7 +25,7 @@ foreach (range(0, $nodes) as $value) {
 findLink($minDistance, $positions);
 
 // find the most distant points
-list($from, $to) = findFromTo($positions);
+[$from, $to] = findFromTo($positions);
 
 $dijkstra = new Dijkstra($positions, $from, $to);
 $shortestPath = $dijkstra->findShortestPath();
