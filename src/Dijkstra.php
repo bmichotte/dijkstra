@@ -130,9 +130,9 @@ class Dijkstra
          * ENDIF
          */
         if (! $this->weights[$child->ref]['passed']
-            && ($this->weights[$parent->ref]['weight'] + self::distance($parent, $child) < $this->weights[$child->ref]['weight']
+            && ($this->weights[$parent->ref]['weight'] + static::distance($parent, $child) < $this->weights[$child->ref]['weight']
                 || $this->weights[$child->ref]['weight'] === -1)) {
-            $this->weights[$child->ref]['weight'] = $this->weights[$parent->ref]['weight'] + self::distance($parent, $child);
+            $this->weights[$child->ref]['weight'] = $this->weights[$parent->ref]['weight'] + static::distance($parent, $child);
             $this->predecessors[$child->ref]['previous'] = $parent;
         }
     }
