@@ -4,6 +4,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/bmichotte/dijkstra.svg?style=flat-square)](https://scrutinizer-ci.com/g/bmichotte/dijkstra)
 [![Code Coverage](https://scrutinizer-ci.com/g/bmichotte/dijkstra/badges/coverage.png?style=flat-square)](https://scrutinizer-ci.com/g/bmichotte/dijkstra)
 [![StyleCI](https://styleci.io/repos/3245321/shield)](https://styleci.io/repos/3245321)
+[![Github Action](https://github.com/bmichotte/dijkstra/workflows/CI/badge.svg)](https://github.com/bmichotte/dijkstra/actions)
 
 More on the algorithm : https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 
